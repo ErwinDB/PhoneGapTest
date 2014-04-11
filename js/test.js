@@ -3,6 +3,8 @@
 }
 
 function capturePhoto() {
+    alert("capturePhoto, navigator.camera = " + navigator.camera);
+
     // Take picture using device camera and retrieve image as base64-encoded string
     navigator.camera.getPicture(onPhotoURISuccess, onFail, {
         quality: 50,
