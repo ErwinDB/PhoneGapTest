@@ -1,0 +1,111 @@
+/* Adding extra icons */
+
+.ui-icon-email , .ui-icon-page,
+.ui-icon-question , .ui-icon-foursquare, .ui-icon-dollar , .ui-icon-euro,
+.ui-icon-pound , .ui-icon-apple , .ui-icon-chat , .ui-icon-trash , .ui-icon-mappin , .ui-icon-direction,
+.ui-icon-heart , .ui-icon-wrench , .ui-icon-play , .ui-icon-pause , .ui-icon-stop , .ui-icon-person , .ui-icon-music,
+.ui-icon-wifi , .ui-icon-phone , .ui-icon-power ,
+.ui-icon-lightning , .ui-icon-drink , .ui-icon-android {
+	background-image: url('images/icons-18-white-pack.png') !important;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 240dpi) {
+		   
+	.ui-icon-email , .ui-icon-page,
+	.ui-icon-question , .ui-icon-foursquare, .ui-icon-dollar , .ui-icon-euro,
+	.ui-icon-pound , .ui-icon-apple , .ui-icon-chat , .ui-icon-trash , .ui-icon-mappin , .ui-icon-direction,
+	.ui-icon-heart , .ui-icon-wrench , .ui-icon-play , .ui-icon-pause , .ui-icon-stop , .ui-icon-person , .ui-icon-music,
+	.ui-icon-wifi , .ui-icon-phone , .ui-icon-power ,
+	.ui-icon-lightning , .ui-icon-drink , .ui-icon-android {
+		background-image: url('images/icons-36-white-pack.png') !important;
+		-moz-background-size: 774px 54px;
+		-o-background-size: 774px 54px;
+		-webkit-background-size: 774px 54px;
+		background-size: 774px 54px;
+	}
+	.ui-icon-alt {
+		background-image: url('images/icons-36-black-pack.png');
+	}	
+}
+
+/* first row, use original iconset */
+
+/* begin icon pack definitions */
+/* second row */
+.ui-icon-email { background-position: 1px -17px !important; }
+.ui-icon-page { background-position: -36px -17px !important; }
+.ui-icon-question { background-position: -71px -17px !important; }
+.ui-icon-foursquare { background-position: -107px -17px !important; }
+.ui-icon-dollar { background-position: -215px -17px !important; }
+.ui-icon-euro { background-position: -251px -17px !important; }
+.ui-icon-pound { background-position: -287px -17px !important; }
+.ui-icon-apple { background-position: -323px -17px !important; }
+.ui-icon-chat { background-position: -359px -17px !important; }
+.ui-icon-trash { background-position: -395px -17px !important; }
+.ui-icon-mappin { background-position: -467px -17px !important; }
+.ui-icon-direction { background-position: -503px -17px !important; }
+.ui-icon-heart { background-position: -539px -17px !important; }
+.ui-icon-wrench { background-position: -575px -17px !important; }
+.ui-icon-play { background-position: -611px -17px !important; }
+.ui-icon-pause { background-position: -647px -17px !important; }
+.ui-icon-stop { background-position: -683px -17px !important; }
+.ui-icon-person { background-position: -719px -17px !important; }
+.ui-icon-music { background-position: -755px -17px !important; }
+
+/* third row */
+.ui-icon-wifi { background-position: -35px -34px !important; }
+.ui-icon-phone { background-position: -72px -36px !important; }
+.ui-icon-power { background-position: -107px -35px !important; }
+.ui-icon-lightning { background-position: -251px -35px !important; }
+.ui-icon-android { background-position: -323px -35px !important; }
+
+.pti-btn {
+	width: 67px;
+	height:40px;
+	position:fixed;
+	top:0;
+	background-image: url('images/icons-36-black-pack.png');
+	background-repeat:no-repeat;
+	z-index:999;
+}
+/*
+.pti-btn.pti-left { left:0; border-right: solid 1px #aaa; }
+.pti-btn.pti-right { right:0; border-left: solid 1px #aaa; }
+*/
+
+.pti-icon-unknown-connection { background-position: -1281px -70px; }
+.pti-icon-ethernet-connection { background-position: -1209px -70px; }
+.pti-icon-wifi-connection, .pti-icon-wifi { background-position: -56px -70px; }
+.pti-icon-cell-2g-connection { background-position: -993px -70px; }
+.pti-icon-cell-3g-connection { background-position: -1065px -70px; } 
+.pti-icon-cell-4g-connection { background-position: -1137px -70px; } 
+.pti-icon-wifi-low { background-position: -921px -70px; }
+.pti-icon-no-network-connection { background-position: -849px -70px; }
+
+/* icons 18 ...
+.pti-icon-unknown-connection { background-position: -3px -36px; }
+.pti-icon-ethernet-connection { background-position: -3px -36px; }
+.pti-icon-wifi-connection, .pti-icon-wifi { background-position: -3px -36px; }
+.pti-icon-cell-2g-connection { background-position: -3px -36px; }
+.pti-icon-cell-3g-connection { background-position: -3px -36px; } 
+.pti-icon-cell-4g-connection { background-position: -3px -36px; } 
+.pti-icon-wifi-low { background-position: -3px -36px; }
+.pti-icon-no-network-connection { background-position: -3px -36px; }
+*/
+
+
+.pti-icon-email { background-position: 16px -34px; }
+.pti-icon-email-new { background-position: -1353px -70px; }
+.pti-btn .pti-count{
+	position:absolute;
+	width:14px;
+	height:17px;
+	background-color:#ff0000;
+	top:8px;
+	left:6px;
+	text-align:center;
+	font:12px/17px Arial, Helvetica, sans-serif;
+	color: #FFF;
+}
