@@ -2,6 +2,7 @@
 /// <reference path="camera.js" />
 /// <reference path="CameraConstants.js" />
 /// <reference path="CameraPopoverOptions.js" />
+var _imageURI;
 
 function takePicture() {
     capturePhoto();
@@ -21,14 +22,16 @@ function capturePhoto() {
 }
 
 function onSuccess(imageURI) {
-    alert("onSuccess: imageURI = " + imageURI);
+    _imageURI = imageURI;
     window.resolveLocalFileSystemURI(imageURI, gotFileEntry, function (error) { onFail(error); });
 }
 
 function gotFileEntry(targetImg) {
-    alert("gotFileEntry: targetImg = " + targetImg.fullPath);
     $.mobile.changePage("#photopage");
-    $("#photo").attr("src", targetImg.fullPath);
+    //Does not work:
+    //$("#photo").attr("src", targetImg.fullPath);
+    //Works:
+    $("#photo").attr("src", _imageURI);
 }
 
 function onFail(message) {
