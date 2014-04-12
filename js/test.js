@@ -10,13 +10,14 @@ function takePicture() {
 function capturePhoto() {
     alert("capturePhoto, navigator.camera = " + navigator.camera);
 
+    /*
     navigator.camera.getPicture(onSuccess, onFail, {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI
     });
+    */
 
-    /*
-    navigator.camera.getPicture(onPhotoURISuccess, onFail, {
+    navigator.camera.getPicture(onSuccess, onFail, {
         quality: 50,
         targetWidth: 800,
         targetHeight: 600,
@@ -26,12 +27,12 @@ function capturePhoto() {
         correctOrientation: true,
         saveToPhotoAlbum: true
     });
-    */
 }
 
 function onSuccess(imageURI) {
     //var image = document.getElementById("photo");
     //image.src = imageURI;
+    alert("onSuccess: imageURI = " + imageURI);
     $.mobile.changePage("#photopage");
     $("#photo").attr("src", imageURI);
 }
