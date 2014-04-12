@@ -8,15 +8,6 @@ function takePicture() {
 }
 
 function capturePhoto() {
-    alert("capturePhoto, navigator.camera = " + navigator.camera);
-
-    /*
-    navigator.camera.getPicture(onSuccess, onFail, {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI
-    });
-    */
-
     navigator.camera.getPicture(onSuccess, onFail, {
         quality: 50,
         targetWidth: 800,
@@ -29,28 +20,15 @@ function capturePhoto() {
     });
 }
 
-//function onSuccess(imageURI) {
-//    //var image = document.getElementById("photo");
-//    //image.src = imageURI;
-
-//    alert("onSuccess: imageURI = " + imageURI);
-//    $.mobile.changePage("#photopage");
-//    $("#photo").attr("src", imageURI);
-//}
-
-//function onFail(message) {
-//    alert("Failed because: " + message);
-//}
-
 function onSuccess(imageURI) {
     alert("onSuccess: imageURI = " + imageURI);
     window.resolveLocalFileSystemURI(imageURI, gotFileEntry, function (error) { onFail(error); });
 }
 
 function gotFileEntry(targetImg) {
-    alert("gotFileEntry: targetImg = " + targetImg);
+    alert("gotFileEntry: targetImg = " + targetImg.fullPath);
     $.mobile.changePage("#photopage");
-    $("#photo").attr("src", targetImg);
+    $("#photo").attr("src", targetImg.fullPath);
 }
 
 function onFail(message) {
