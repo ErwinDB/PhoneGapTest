@@ -21,7 +21,7 @@ function capturePhoto() {
         quality: 50,
         targetWidth: 800,
         targetHeight: 600,
-        destinationType: destinationType.FILE_URI,
+        destinationType: Camera.DestinationType.FILE_URI,
         sourceType: Camera.PictureSourceType.CAMERA,
         encodingType: Camera.EncodingType.JPEG,
         correctOrientation: true,
@@ -32,6 +32,7 @@ function capturePhoto() {
 function onSuccess(imageURI) {
     //var image = document.getElementById("photo");
     //image.src = imageURI;
+
     alert("onSuccess: imageURI = " + imageURI);
     $.mobile.changePage("#photopage");
     $("#photo").attr("src", imageURI);
