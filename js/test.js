@@ -29,28 +29,30 @@ function capturePhoto() {
     });
 }
 
+//function onSuccess(imageURI) {
+//    //var image = document.getElementById("photo");
+//    //image.src = imageURI;
+
+//    alert("onSuccess: imageURI = " + imageURI);
+//    $.mobile.changePage("#photopage");
+//    $("#photo").attr("src", imageURI);
+//}
+
+//function onFail(message) {
+//    alert("Failed because: " + message);
+//}
+
 function onSuccess(imageURI) {
-    //var image = document.getElementById("photo");
-    //image.src = imageURI;
-
     alert("onSuccess: imageURI = " + imageURI);
-    $.mobile.changePage("#photopage");
-    $("#photo").attr("src", imageURI);
-}
-
-function onFail(message) {
-    alert("Failed because: " + message);
-}
-/*
-function onPhotoURISuccess(imageURI) {
-    alert("onPhotoURISuccess: imageURI = " + imageURI);
-    window.resolveLocalFileSystemURI(imageURI, gotFileEntry, function (error) { onFail("Get Target Image"); });
+    window.resolveLocalFileSystemURI(imageURI, gotFileEntry, function (error) { onFail(error); });
 }
 
 function gotFileEntry(targetImg) {
     alert("gotFileEntry: targetImg = " + targetImg);
+    $.mobile.changePage("#photopage");
+    $("#photo").attr("src", targetImg);
 }
 
 function onFail(message) {
     alert("Failed because: " + message);
-*/
+}
