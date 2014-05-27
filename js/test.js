@@ -27,6 +27,8 @@ function onSuccess(imageURI) {
 }
 
 function gotFileEntry(targetImg) {
+    alert("targetImg.fullPath = " + targetImg.fullPath);
+    alert("_imageURI = " + _imageURI);
     $.mobile.changePage("#photopage");
     //Does not work:
     //$("#photo").attr("src", targetImg.fullPath);
